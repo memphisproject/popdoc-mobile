@@ -1,0 +1,113 @@
+ion-card {
+    width: 100%;
+    --background: white;
+}
+
+ion-header {
+    --background: var(--popdoc-sidebar-selected);
+}
+
+ion-toolbar {
+    --background: var(--popdoc-sidebar-selected);
+}
+
+ion-content {
+    --background: white;
+}
+
+.spinner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.file-wrapper {
+    width: 100vw;
+}
+
+ion-item {
+    --background: white;
+    color: black;
+    
+    .title p{
+        color: black;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    p {
+        color: black;
+    }
+
+    ion-note {
+        font-size: 12px;
+    }
+}
+
+ion-list {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.froala-editor {
+    width: 100%;
+    margin: 10px;
+}
+
+
+ion-segment {
+    margin-top: 10px;
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+ion-segment-button {
+    --indicator-box-shadow: transparent!important;
+    --background:white;
+    --color:black;
+    --background-checked: var(--popdoc-sidebar-selected) !important;
+    --color-checked: white!important;
+    --indicator-color : transparent!important; 
+}
+
+
+.time {
+    text-align: right;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    white-space: pre-wrap;
+}
+
+.from-me {
+    background: var(--popdoc-sidebar-selected);
+}
+
+.from-them  {
+    background: var(--popdoc-sidebar-background);
+}
+
+.msg-input {
+    width: 100%;
+    color: black;
+    border:1px solid var(--ion-color-medium);
+    border-radius: 10px;
+    background: #fff;
+    resize: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.msg-button {
+    --padding-start: 0.5em;
+    --padding-end: 1em;
+}
+
+.message-toolbar {
+    --background: #bfbfbf;
+    --border-width: 0 !important;
+}

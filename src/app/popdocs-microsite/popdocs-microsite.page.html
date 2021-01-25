@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{selectedCollection.title}}</ion-title>
+    <ion-icon *ngIf="selectedCollection" md="settings-outline" ios="cog-outline" slot="end" (click)="openMicrositeSettings()"></ion-icon>
+    <ion-icon  slot="end" [ios]="'share-outline'" [md]="'share-social-outline'" (click)="onShare()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="user_profile_cap">
+    <div class="user_profile_cover">
+      <img *ngIf="selectedCollection.coverImg" [src]="'https:' + selectedCollection.coverImg" alt="img"/>
+      <img *ngIf="!selectedCollection.coverImg" src="assets/defaultBanner.png" alt="img"/>
+
+    </div>
+    <div class="user_profile_headline" (click)="openStory()">
+        <img *ngIf="selectedCollection.image" [src]="'https:' + selectedCollection.image" alt="img"/> 
+        <img *ngIf="!selectedCollection.image" src="assets/popdoc_logo.png" alt="img"/> 
+
+        <h2>{{selectedCollection.title}}</h2>
+        <span>{{selectedCollection.user.name}}</span>
+    </div>
+  </div>
+  <div class="tile-wrapper">
+    <ion-item *ngFor="let tile of tiles" lines="none">  
+      <ion-card 
+        *ngIf="tile.type === 'tile'" 
+        class="tile">
+        <ion-card-content>
+          <div class="tile-content" [froalaView]="tile.htmlContent !== '' ? tile.htmlContent : tile.meta.content"></div>
+        </ion-card-content>
+      </ion-card>
+      <ion-card *ngIf="tile.type === 'mosaicTile'" class="mosaic-tile blur">
+        <ion-row>
+          <ion-col>
+            <ion-card-content>
+              <ion-text>{{tile.meta.content}}</ion-text>
+            </ion-card-content>
+          </ion-col>
+          <ion-col size="3" style="padding-top: 16px">
+            <ion-icon name="folder-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card *ngIf="tile.type === 'specific-file'" class="blur" (click)="selectTile(tile._id)">
+        <ion-row>
+          <ion-col>
+            <ion-card-content>
+              <ion-text>{{tile.title}}</ion-text>
+            </ion-card-content>
+          </ion-col>
+          <ion-col size="3" style="padding-top: 16px">
+            <ion-icon name="document-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-item>
+  </div>
+</ion-content>

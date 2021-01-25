@@ -1,0 +1,61 @@
+ion-content{
+    --ion-background-color: white;
+  }
+  
+  ion-toolbar {
+    --background: #5997A9;
+  }
+  
+  ion-card {
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+  }
+  
+  .navigation-options {
+    position: absolute;
+    bottom: 50px;
+    left: 48vw;
+    color: black;
+  }
+  
+  .blur::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    background-image: url("/assets/blurred_effect.png");
+    width: 100%;
+    height: 100%;
+    background-position: center ;
+    opacity: 0.5;
+}
+
+
+.blur {
+    border-radius: 20px;
+    position: relative;
+    height: 90px;
+}
+
+.blur ion-icon {
+    font-size: 2.5rem;
+    padding: 9px;
+    color: black;
+    background-color: #E3E9FF;
+    border-radius: 45px;
+    float: right;
+    margin-right: 10px;
+}
+
+.blur ion-card-content {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    vertical-align: center;
+}
+
+.tile {
+    --background: #fefeff;
+    color: black;
+    border-radius: 10px;
+  }

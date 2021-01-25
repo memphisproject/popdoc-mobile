@@ -1,0 +1,150 @@
+ion-header {
+    --background: var(--popdoc-sidebar-selected);
+}
+
+ion-toolbar {
+    --background: var(--popdoc-sidebar-selected);
+
+    ion-icon{
+        padding: 3px;
+        font-size: 20px;
+        color: white;
+    }
+}
+
+ion-content {
+    --background: white;
+}
+
+ion-item {
+    --background: white;
+}
+
+.tile {
+    --background: #fefeff;
+    color: black;
+    border-radius: 10px;
+  }
+
+.spinner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+ion-row {
+    max-height: 15vh;
+    overflow: hidden;
+}
+
+#cover-img {
+    width: 100%;
+}
+
+ion-card {
+    width: 100%;
+}
+
+
+.blur::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    background-image: url("/assets/blurred_effect.png");
+    width: 100%;
+    height: 100%;
+    background-position: center ;
+    opacity: 0.5;
+}
+
+.blur {
+    border-radius: 20px;
+    position: relative;
+    height: 90px;
+}
+
+.blur ion-icon {
+    font-size: 2.5rem;
+    padding: 9px;
+    color: black;
+    background-color: #E3E9FF;
+    border-radius: 45px;
+    float: right;
+    margin-right: 10px;
+}
+
+.blur ion-card-content {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    vertical-align: center;
+}
+
+ion-tab-bar {
+    --background: var(--popdoc-main-toolbar-color);
+}
+
+ion-tab-button {
+    --background: var(--popdoc-main-toolbar-color);
+}
+
+.space-top {
+    margin-top: 10vh;
+}
+
+.tile-wrapper {
+    margin-bottom: 10vh;
+
+    ion-card{
+        box-shadow: none !important;
+    }
+}
+
+.user_profile_cap {
+    width: 970;
+    height: auto 13;
+    overflow:hidden;
+  }
+  
+  .user_profile_cover {
+      max-height: 15vh;
+      overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  
+  .user_profile_headline {
+    padding: 10px;
+    font-size: 16px;
+  }
+.user_profile_headline img{
+    border-radius: 50%;
+    border: 6px solid var(--popdoc-sidebar-selected);
+    width:124px;
+    height:124px;
+    float:left;
+    margin:-90px 10px 0  0;
+    position:relative;
+    z-index:111;
+
+    background-color:white;
+}
+  .user_profile_headline h2{
+      color: black;
+      margin:0;
+      padding:0;
+      font-size:20px;
+      font-weight:bold;
+      display:block;   
+  }
+  
+  .user_profile_headline span{
+      font-size:10px;
+      font-family:verdana;
+      color:gray;
+   
+  }
+
+

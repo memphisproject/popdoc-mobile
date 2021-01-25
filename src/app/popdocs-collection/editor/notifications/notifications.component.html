@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Notifications</ion-title>
+    <ion-icon name="close-circle-outline" slot="end" (click)="close()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list *ngIf="userNotifications">
+    <ion-item *ngFor="let notification of userNotifications" lines="none" >
+      <ion-avatar slot="start">
+        <img *ngIf="usersList[notification.from] && usersList[notification.from].userInfo.image" [src]="'https:' + usersList[notification.from].userInfo.image">
+        <img *ngIf="usersList[notification.from] && !usersList[notification.from].userInfo.image" ngxGravatar [email]="usersList[notification.from].email"/>      
+      </ion-avatar>
+
+      <ion-label *ngIf="usersList[notification.from]">
+        <h2 *ngIf="notification.type === 'mention' " >{{usersList[notification.from].name}} mentioned</h2>
+        <h2 *ngIf="notification.type === 'new-collection'"> {{usersList[notification.from].name}} invited to a new collection</h2>
+        <p>{{notification.time | messageTime}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

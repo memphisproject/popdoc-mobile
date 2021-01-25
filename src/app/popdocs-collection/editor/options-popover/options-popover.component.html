@@ -1,0 +1,20 @@
+<ion-list>
+    <ion-item (click)="openMicrosite()">
+        <ion-label>
+            <ion-icon *ngIf="selectedCollection" name="eye-outline" slot="end"  ></ion-icon>
+            Microsite
+        </ion-label>
+    </ion-item>
+    <ion-item (click)="openCollectionSettings()">
+        <ion-label >
+            <ion-icon *ngIf="selectedCollection" md="settings-outline" ios="cog-outline" slot="end" ></ion-icon>
+            Settings
+        </ion-label>
+    </ion-item>
+    <ion-item (click)="openCollectionShare()">
+        <ion-label>
+            <ion-icon *ngIf="selectedCollection" slot="end" name="people-circle-outline" ></ion-icon>
+            Collaborators
+        </ion-label>
+    </ion-item>
+</ion-list>

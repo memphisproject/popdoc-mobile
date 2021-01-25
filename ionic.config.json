@@ -1,0 +1,7 @@
+{
+  "name": "popdocs_mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

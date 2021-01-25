@@ -1,0 +1,14 @@
+<ion-content>
+  <form class="box" [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!isLoading; else loading">
+    <img src="assets/popdoc_full_logo.png" alt="" srcset="">
+    <input type="text" formControlName="email" placeholder="Username" autocomplete="on" autocorrect="on" clearInput="true" clearOnEdit="false">
+    <input type="password"  formControlName="password" placeholder="Password" autocomplete="on" autocorrect="on" clearInput="true" clearOnEdit="false">
+    <p><small>{{errorMessage}}</small></p>
+    <ion-button type="submit" shape="round" >Login</ion-button>
+  </form>  
+  <ng-template #loading>
+    <div class="spinner">
+      <ion-spinner name="lines" color="primary"></ion-spinner>
+    </div>
+  </ng-template>
+</ion-content>

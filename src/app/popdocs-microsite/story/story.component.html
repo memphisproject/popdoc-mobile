@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Story</ion-title>
+    <ion-icon name="close-circle-outline" slot="end" (click)="close()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-content [fullscreen]="true" scroll-y="false"
+               class="container"
+               (swipeleft)="swipeLeftNav()"
+               (swiperight)="swipeRightNav()"
+               (swipedown)="swipeDownNav()"
+               (swipeup)="swipeUpNav()">
+    <ion-card *ngIf="selectedTile && selectedTile.type !== 'specific-file'" class="tile">
+      <ion-card-content>
+        <div class="tile-content" [froalaView]="selectedTile.htmlContent !== '' ? selectedTile.htmlContent : selectedTile.meta.content"></div>
+      </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="selectedTile && selectedTile.type === 'specific-file'" class="mosaic-tile blur">
+      <ion-row>
+        <ion-col>
+          <ion-card-content>
+            <ion-text>{{selectedTile.title}}</ion-text>
+          </ion-card-content>
+        </ion-col>
+        <ion-col size="3" style="padding-top: 16px">
+          <ion-icon name="document-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <div class="navigation-options" *ngIf="selectedTile">
+      <ion-icon name="arrow-up-outline" color="black" *ngIf="selectedTile.storyNav.up || selectedTile.storyNav.up === 0"></ion-icon>
+      <div class="side">
+        <ion-icon name="arrow-back-outline" *ngIf="selectedTile.storyNav.left || selectedTile.storyNav.left === 0"></ion-icon> &nbsp;
+        <ion-icon name="arrow-forward-outline" *ngIf="selectedTile.storyNav.right|| selectedTile.storyNav.right === 0"></ion-icon>
+      </div>
+      <ion-icon name="arrow-down-outline" color="black" *ngIf="selectedTile.storyNav.down || selectedTile.storyNav.down === 0"></ion-icon>
+    </div>
+  </ion-content>
+</ion-content>

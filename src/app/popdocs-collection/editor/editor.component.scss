@@ -1,0 +1,159 @@
+.placeholder-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ion-header {
+    --background: var(--popdoc-sidebar-selected);
+}
+
+ion-toolbar {
+    ion-icon {
+        padding: 5px;        
+        font-size: 20px;
+    }
+    --background: var(--popdoc-sidebar-selected);
+}
+
+.segment-toolbar {
+    --background:white;
+}
+
+ion-content {
+    --background: white;
+    --overflow: scroll;
+}
+
+ion-item {
+    --background: white;
+}
+
+.tile {
+    --background: #fefeff;
+    color: black;
+    border-radius: 10px;
+  }
+
+.spinner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+ion-row {
+    max-height: 15vh;
+    overflow: hidden;
+}
+
+#cover-img {
+    width: 100%;
+}
+
+ion-card {
+    width: 100%;
+}
+
+
+.blur::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    background-image: url("/assets/blurred_effect.png");
+    width: 100%;
+    height: 100%;
+    background-position: center ;
+    opacity: 0.5;
+}
+
+.blur {
+    border-radius: 20px;
+    position: relative;
+    height: 90px;
+}
+
+.blur ion-icon {
+    font-size: 2.5rem;
+    padding: 9px;
+    color: black;
+    background-color: #E3E9FF;
+    border-radius: 45px;
+    float: right;
+    margin-right: 10px;
+}
+
+.blur ion-card-content {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    vertical-align: center;
+}
+
+ion-tab-bar {
+    --background: var(--popdoc-main-toolbar-color);
+}
+
+ion-tab-button {
+    --background: var(--popdoc-main-toolbar-color);
+}
+
+.tile-wrapper {
+    margin-bottom: 10vh;
+}
+
+.edit-mode-toggle {
+    --background: white;
+    ion-label {
+        color: black;
+        margin-right: 10px;
+    }
+}
+
+.drag-handle {
+    color: black;
+    font-size: 24px;
+}
+
+
+ion-segment {
+    margin-top: 10px;
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+ion-segment-button {
+    --indicator-box-shadow: transparent!important;
+    --background:white;
+    --color:black;
+    --background-checked: var(--popdoc-sidebar-selected) !important;
+    --color-checked: white!important;
+    --indicator-color : transparent!important; 
+}
+
+
+.msg-input {
+    width: 100%;
+    color: black;
+    border:1px solid var(--ion-color-medium);
+    border-radius: 10px;
+    background: #fff;
+    resize: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.msg-button {
+    --padding-start: 0.5em;
+    --padding-end: 1em;
+}
+
+.message-toolbar {
+    --background: #bfbfbf;
+    --border-width: 0 !important;
+}
+
+.disable-scroll {
+    --overflow: hidden;
+}

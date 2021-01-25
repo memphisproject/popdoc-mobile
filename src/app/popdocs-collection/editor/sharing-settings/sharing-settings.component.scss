@@ -1,0 +1,39 @@
+ion-header {
+    --background: var(--popdoc-sidebar-selected);
+}
+
+ion-toolbar {
+    --background: var(--popdoc-sidebar-selected);
+}
+
+ion-content {
+    --background: white;
+}
+
+.list-md {
+    background-color: white;
+}
+  
+.list-ios {
+    background: white;
+}
+
+ion-list-header {
+    color: var(--popdoc-sidebar-background);
+}
+
+ion-item {
+    --background: white;
+    color: black;
+
+    p{
+        color: grey;
+    }
+}
+
+ion-tab-bar {
+    --background: var(--popdoc-sidebar-background);
+    ion-tab-button {
+        color: var(--popdoc-sidebar-selected);
+    }
+}

@@ -1,0 +1,34 @@
+ion-header {
+    --background: var(--popdoc-sidebar-selected);
+}
+
+ion-toolbar {
+    --background: var(--popdoc-sidebar-selected);
+}
+
+ion-content {
+    --background: white;
+}
+
+ion-item {
+    --background: white;
+    color: black;
+    
+    .title p{
+        color: black;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    p {
+        color: black;
+    }
+
+    ion-note {
+        font-size: 12px;
+    }
+}
+
+ion-list {
+    margin-left: 10vw;
+}

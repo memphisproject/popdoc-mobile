@@ -1,0 +1,40 @@
+
+.time {
+    text-align: right;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    white-space: pre-wrap;
+}
+
+.from-me {
+    background: var(--popdoc-sidebar-selected);
+}
+
+.from-them  {
+    background: var(--popdoc-sidebar-background);
+}
+
+.msg-input {
+    width: 100%;
+    color: black;
+    border:1px solid var(--ion-color-medium);
+    border-radius: 10px;
+    background: #fff;
+    resize: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.msg-button {
+    --padding-start: 0.5em;
+    --padding-end: 1em;
+}
+
+.message-toolbar {
+    --background: #bfbfbf;
+    --border-width: 0 !important;
+}
